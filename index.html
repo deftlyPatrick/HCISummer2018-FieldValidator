@@ -202,7 +202,7 @@
             
         
             <div class="text-xs-center">
-                <div class="g-recaptcha" data-sitekey="6LfLqGYUAAAAANoZ3KTZOgnZisWH3HMSkRSkzj8O"></div>
+                <div class="g-recaptcha" data-sitekey="6LfLqGYUAAAAANoZ3KTZOgnZisWH3HMSkRSkzj8O" data-callback="enableBtn"></div>
         </div>
             <div class="text-xs-center">
               <button type="submit" class="btn btn-primary"  onclick = "function()" id = "submit">Submit</button>
@@ -259,6 +259,14 @@
 
         password.onchange = validatePassword;
         confirm_password.onkeyup = validatePassword;
+      </script>
+      
+      <script>
+      
+       function enableBtn(){
+            document.getElementById("submit").disabled = false;
+        }
+      
       </script>
      
 
