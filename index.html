@@ -1,0 +1,267 @@
+<!doctype html>
+
+<html lang="en">
+   <title>CSC 642 Form</title>   
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+        
+
+        .text-xs-center {
+            text-align: center;
+        }
+
+        .g-recaptcha {
+            display: inline-block;
+            padding-top: 30px;
+            padding-bottom: 20px;
+        }
+        
+        .warning {
+            font-size: .60rem;
+            color: #FF0000;
+        }
+        
+        .warning2{
+            font-size: .90rem;
+            color: #FF0000;
+        }
+        
+        input:invalid{
+            color: red
+        }
+
+        input:valid{
+            background-color: #E7FEEB;
+            color: green; 
+        }
+      
+
+        #submit{
+            width: 300px;
+            height: 50px;
+            
+        }
+        
+      </style>  
+      
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      
+<h1 class = "text-center">CSC 642 Summer 2018 Individual Assignment: Patrick Wong </h1>
+    <h2 class = "text-center"> Registration Form </h2>
+      
+<form class = "form-valid" action="confirm.php" method = "get" novalidate>
+    <div class = "form-center container center_div">
+        <div class = "col-md-8 container center_div">
+    
+            <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputFirstName"> First Name: </label>
+                <span class="warning">*(Only letters.)</span>
+              <input type="text" name = "FirstName" class="form-control" maxlength="40" minlength="2" id="inputFirstName" placeholder="Enter your first name" pattern = "[A-Za-z\s]+" required />
+                <span></span>
+                <div class="invalid-feedback">
+                Please enter your first name.
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputLastName"> Last Name: </label>
+                 <span class="warning">*(Only letters.)</span>
+              <input type="text" name = "LastName" class="form-control" maxlength="40" minlength="2" id="inputLastName" placeholder="Enter your last name" pattern = "[A-Za-z\s]+" required>
+                  <div class="invalid-feedback">
+                Please enter your last name.
+              </div>
+            </div>
+          </div>
+            
+            <div class="form-group">
+                <label for="inputAddress">Address: </label>
+                <span class="warning">*(Only numbers and letters.)</span>
+                <input type="text" name = "Address" class="form-control" id="inputAddress" placeholder="Enter your current address." pattern = "[0-9]+[A-Za-z\s]+[A-Za-z\s]" required>
+                 <div class="invalid-feedback">
+                Please enter your current address.
+              </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-5">
+                    <label for="inputCity">City: </label>
+                    <span class="warning">*(Only letters.)</span>
+                    <input type="text" name = "City" class="form-control" id="inputCity" placeholder="Enter your city." pattern = "[A-Za-z\s]+" required>
+                     <div class="invalid-feedback">
+                Please enter your city.
+              </div>
+                </div>
+            
+                <div class="form-group col-md-4"> 
+                    <label for="inputState">State: </label>
+                    <span class="warning">*(Select One.)</span>
+                    <select id="inputState" name = "State" class="form-control">
+                        <option> California </option>               
+                    </select>
+                </div>
+                
+                <div class="form-group col-md-3">
+                    <label for="inputZip">Zip Code: </label>
+                    <span class="warning">*(Only numbers)</span>
+                    <input type="text" name = "ZipCode" class="form-control" maxlength = "5" id="inputZip" placeholder="Enter your zip code" pattern = "[0-9]{5}" inputmode = "numeric" required>
+                     <div class="invalid-feedback">
+                Please enter a valid zip code.
+              </div>
+                </div>        
+            </div>
+        
+            <div class="form-group">
+            <label for="exampleFormControlSelect1"> Education Status: </label>
+                <span class="warning">*(Select One)</span>
+            <small id="EducationHelp" class="form-text text-muted">What is your highest level of education?</small>
+            <select class="form-control" name = "EducationStatus" id="exampleFormControlEducation" required>
+              <option> High School </option>
+              <option> Associates Degree (A.A.) </option>
+              <option> Bachelors Degree (B.S.) </option>
+              <option> Masters Degree (M.A)</option>
+              <option> Doctor of Philosophy (Ph.D.) </option>
+             <option> None of above </option>   
+            </select >
+              <div class="invalid-feedback">
+                Please select your education status.
+              </div>
+            </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlSelect1"> Income: (Yearly) </label>
+              <span class="warning">*(Select One)</span>
+             <small id="IncomeHelp" class="form-text text-muted">How much money do you earn every year?</small>    
+            <select class="form-control" name = "Income" id="exampleFormControlEducation" required>
+              <option> less than $50,000 </option>
+              <option> between $50,000 - $100,000 </option>
+              <option> above $100,000 </option>  
+            </select>
+              <div class="invalid-feedback">
+                Please select your yearly income.
+              </div>
+          </div>   
+
+         
+            
+              <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputPhoneNumber"> Phone Number: </label>
+                <span class="warning">*(Format: X-XXX-XXX-XXXX)</span>
+              <input type="text" name = "PhoneNumber" class="form-control" id="inputPhoneNumber" pattern = "^\d{1}-\d{3}-\d{3}-\d{4}$" maxlength = "15" placeholder="Enter your phone number" required>
+                <div class="invalid-feedback">
+                Please enter a valid phone number. 
+              </div>
+            </div>
+                  
+            <div class="form-group col-md-6">
+              <label for="inputEmail"> Email: </label>  
+                <span class="warning">*(Only letters and symbols)</span>
+              <input type="email" name = "EmailAddress" class="form-control" id="inputEmail" placeholder="Enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+            <div class="invalid-feedback">
+                Please enter a valid email.
+              </div>
+            
+            </div>
+          </div>
+            
+
+         <div class="form-group">
+            <label for="inputPassword">Password:</label>
+             <span class="warning2">*</span>
+            <input type="password" minlength="8" class="form-control" id="inputPassword" placeholder="Please enter a password" required>
+            <small id="passwordHelpInline" class="text-muted" required>
+              Must be at 8 characters long.
+            </small>
+  
+             
+          </div>
+
+         <div class="form-group">
+            <label for="exampleInputReenter"> Re-enter Your Password: </label>
+             <span class="warning2">*</span>
+             
+             <input type="password" minlength="8" class="form-control" id="inputPasswordConfirm" placeholder="Please re-enter your password." required>
+          </div>          
+            
+       
+        <a href = "pdf/TOS.pdf" id = "TOS"> By creating an account, you agree to Terms of Service </a>
+
+        <div class="custom-control custom-checkbox " id = "checkTOS">
+            <input type="checkbox" class="custom-control-input"  id="customCheck1" required> 
+            <label class="custom-control-label" for="customCheck1">Do you agree to Terms of Service</label>
+            
+            <span class="warning2">*</span>  
+            <div class="invalid-feedback" >
+                Please agree to Terms of Service before submitting.
+              </div>
+            
+        
+            <div class="text-xs-center">
+                <div class="g-recaptcha" data-sitekey="6LfLqGYUAAAAANoZ3KTZOgnZisWH3HMSkRSkzj8O"></div>
+        </div>
+            <div class="text-xs-center">
+              <button type="submit" class="btn btn-primary"  onclick = "function()" id = "submit">Submit</button>
+            </div>
+    </div>
+        </div>
+    </div>
+</form>
+      
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+         <script src='https://www.google.com/recaptcha/api.js'></script>
+
+      
+      
+      
+        <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('form-valid');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+        </script>
+
+
+        <script>
+              var password = document.getElementById("inputPassword")
+          , confirm_password = document.getElementById("inputPasswordConfirm");
+
+        function validatePassword(){
+          if(password.value != confirm_password.value) {
+            confirm_password.setCustomValidity("Passwords Don't Match");
+          } else {
+            confirm_password.setCustomValidity('');
+          }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+      </script>
+     
+
+      
+        </head>
+</html>
