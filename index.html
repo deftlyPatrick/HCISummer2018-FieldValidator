@@ -202,7 +202,7 @@
             
         
             <div class="text-xs-center">
-                <div class="g-recaptcha" data-sitekey="6LfLqGYUAAAAANoZ3KTZOgnZisWH3HMSkRSkzj8O" data-callback="enableBtn"></div>
+                <div class="g-recaptcha" data-sitekey="6LfLqGYUAAAAANoZ3KTZOgnZisWH3HMSkRSkzj8O" data-callback="correctCaptcha"></div>
         </div>
             <div class="text-xs-center">
               <button type="submit" class="btn btn-primary"  onclick = "function()" id = "submit">Submit</button>
@@ -262,12 +262,19 @@
       </script>
       
       <script>
-      
-       function enableBtn(){
-            document.getElementById("submit").disabled = false;
+          
+        $("form").each(function() {
+            $(this).find(':input[type="submit"]').prop('disabled', true);
+        });
+        
+        function correctCaptcha() {
+            $("form").each(function() {
+                $(this).find(':input[type="submit"]').prop('disabled', false);
+            });
         }
-      
       </script>
+      
+      
      
 
       
