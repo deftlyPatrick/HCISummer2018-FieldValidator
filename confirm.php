@@ -68,7 +68,7 @@
     City : <?php echo $_GET["City"]; ?><br>
     State : <?php echo $_GET["State"]; ?><br>
     Zip Code: <?php echo $_GET["ZipCode"]; ?><br>
-    Education Status: <?php echo $_GET["Education"]; ?><br>
+    Education Status: <?php echo $_GET["EducationStatus"]; ?><br>
     Income: <?php echo $_GET["Income"]; ?><br>
     Phone Number: <?php echo $_GET["PhoneNumber"]; ?><br>
     Email Address: <?php echo $_GET["EmailAddress"]; ?><br>
