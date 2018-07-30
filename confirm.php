@@ -85,11 +85,12 @@
         Phone Number: <?php echo $_GET["PhoneNumber"]; ?><br>
         Email Address: <?php echo $_GET["EmailAddress"]; ?><br>
             </div>
-    </div>
-    <div class="col">
-      <div id="map"></div>
-    </div>
-  </div>
+    
+                <div class="col">
+                    <div id="map"></div>
+                 </div>
+             </div>
+          </div>
       </div>
  
       
