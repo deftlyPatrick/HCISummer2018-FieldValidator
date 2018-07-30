@@ -76,24 +76,7 @@
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgWzjBegv5zRMklJR6eTHIPd_vDSDZuZg&callback=myMap"></script>
     <!-- Add Google Maps -->
-    <script>
-    function myMap(){
-        var formLocation = document.getElementById("Address")    
-          myCenter=new google.maps.LatLng(formLocation);
-          var mapOptions= {
-            center:myCenter,
-            zoom:12, scrollwheel: false, draggable: false,
-            mapTypeId:google.maps.MapTypeId.ROADMAP
-          };
-          var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
 
-          var marker = new google.maps.Marker({
-            position: myCenter,
-          });
-          marker.setMap(map);
-        }    
-    </script>
-    
 </body>
 </html>
 
