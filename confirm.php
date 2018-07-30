@@ -9,8 +9,6 @@
  <head>
      <title>Validation</ title>
 </head>
-    
-    
 
   <h1 class = "text-center">CSC 642 Summer 2018 Individual Assignment: Patrick Wong </h1>
   <h2 class = "text-center"> Registration Form </h2>
@@ -32,6 +30,13 @@
       height: 100%;
     }
     
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
       .sidenav {
@@ -51,21 +56,22 @@
     <div class="col-sm-2 sidenav">
     </div>
         <div class="col-sm-8 text-left"> 
-                <p>Thank you for submitting this form.</p>
-                <p>We have successfully received it.</p>    
+                <p>Thank you for submitting this form. 
+                <p>We have successfully received it.    
                 <p>Below is a summary of the information you provided.<br><br> </p> 
     
-                <p>First Name : </p> <?php echo $_GET["FirstName"]; ?><br>
-                <p>Last Name: </p> <?php echo $_GET["LastName"]; ?><br>
-                <p>Address :</p> <?php echo $_GET["Address"]; ?><br>
-                <p>City :</p> <?php echo $_GET["City"]; ?><br>
-                <p>State :</p> <?php echo $_GET["State"]; ?><br>
-                <p>Zip Code:</p> <?php echo $_GET["ZipCode"]; ?><br>
-                <p>Education Status: <?php echo $_GET["EducationStatus"]; ?><br>
-                <p>Income:</p> <?php echo $_GET["Income"]; ?><br>
-                <p>Phone Number:</p> <?php echo $_GET["PhoneNumber"]; ?><br>
-                <p>Email Address:</p> <?php echo $_GET["EmailAddress"]; ?><br>  
-
+                First Name : <?php echo $_GET["FirstName"]; ?><br>
+                Last Name : <?php echo $_GET["LastName"]; ?><br>
+                Address : <?php echo $_GET["Address"]; ?><br>
+                City : <?php echo $_GET["City"]; ?><br>
+                State : <?php echo $_GET["State"]; ?><br>
+                Zip Code: <?php echo $_GET["ZipCode"]; ?><br>
+                Education Status: <?php echo $_GET["EducationStatus"]; ?><br>
+                Income: <?php echo $_GET["Income"]; ?><br>
+                Phone Number: <?php echo $_GET["PhoneNumber"]; ?><br>
+                Email Address: <?php echo $_GET["EmailAddress"]; ?><br>  
+            
+                <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:600px;"></div>
             </div>
         </div>
     <div class="col-sm-2 sidenav"> 
@@ -76,16 +82,21 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgWzjBegv5zRMklJR6eTHIPd_vDSDZuZg&callback=myMap"></script>
     <!-- Add Google Maps -->
     <script>
-        // Initialize and add the map
-        function initMap() {
-          // The location of Uluru
-          var locate = {lat: 37.721903, lng: -122.478204};
-          // The map, centered at Uluru
-          var map = new google.maps.Map(
-              document.getElementById('map'), {zoom: 4, center: locate});
-          // The marker, positioned at Uluru
-          var marker = new google.maps.Marker({position: uluru, map: map});
-        } 
+    function myMap(){
+        var formLocation = document.getElementById("Address")    
+          myCenter=new google.maps.LatLng(formLocation);
+          var mapOptions= {
+            center:myCenter,
+            zoom:12, scrollwheel: false, draggable: false,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+          };
+          var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+          var marker = new google.maps.Marker({
+            position: myCenter,
+          });
+          marker.setMap(map);
+        }    
     </script>
     
 </body>
