@@ -73,7 +73,7 @@
         <p>Below is a summary of the information you provided.<br><br> </p> 
          <div class="container">
   <div class="row">
-    <div class="col">
+    <div class="col" text-center>
         First Name : <?php echo $_GET["FirstName"]; ?><br>
         Last Name : <?php echo $_GET["LastName"]; ?><br>
         Address : <?php echo $_GET["Address"]; ?><br>
