@@ -15,10 +15,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
   <style>
     
+      p{
+        font-family: 'Roboto', sans-serif;
+      }
     
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 450px}
@@ -59,19 +64,19 @@
     <div class="col-sm-8 text-left"> 
     <p>Thank you for submitting this form. 
 
-<p>We have successfully received it.    
-<p>Below is a summary of the information you provided.<br><br> </p> 
+        <p>We have successfully received it.    
+        <p>Below is a summary of the information you provided.<br><br> </p> 
     
-    First Name : <?php echo $_GET["FirstName"]; ?><br>
-    Last Name : <?php echo $_GET["LastName"]; ?><br>
-    Address : <?php echo $_GET["Address"]; ?><br>
-    City : <?php echo $_GET["City"]; ?><br>
-    State : <?php echo $_GET["State"]; ?><br>
-    Zip Code: <?php echo $_GET["ZipCode"]; ?><br>
-    Education Status: <?php echo $_GET["Education"]; ?><br>
-    Income: <?php echo $_GET["Income"]; ?><br>
-    Phone Number: <?php echo $_GET["PhoneNumber"]; ?><br>
-    Email Address: <?php echo $_GET["EmailAddress"]; ?><br>
+        <p>First Name :</p> <?php echo $_GET["FirstName"]; ?><br>
+        <p>Last Name :</p> <?php echo $_GET["LastName"]; ?><br>
+        <p>Address :</p> <?php echo $_GET["Address"]; ?><br>
+        <p>City :</p> <?php echo $_GET["City"]; ?><br>
+        <p>State :</p> <?php echo $_GET["State"]; ?><br>
+        <p>Zip Code:</p> <?php echo $_GET["ZipCode"]; ?><br>
+        <p>Education Status:</p> <?php echo $_GET["EducationStatus"]; ?><br>
+        <p>Income: </p> <?php echo $_GET["Income"]; ?><br>
+        <p>Phone Number:</p> <?php echo $_GET["PhoneNumber"]; ?><br>
+        <p>Email Address:</p> <?php echo $_GET["EmailAddress"]; ?><br>
     
 
     </div>
