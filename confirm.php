@@ -73,12 +73,8 @@
         <p>Below is a summary of the information you provided.<br><br> </p> 
       </div>
         <div class="row">
-  <div class="col-8" style= "width:100%;height:400px;">
-      <div id="map"></div>
-            </div>
-  
-    <div class="col-4">
-        First Name : <?php echo $_GET["FirstName"]; ?><br>
+  <div class="col-8">
+         First Name : <?php echo $_GET["FirstName"]; ?><br>
         Last Name : <?php echo $_GET["LastName"]; ?><br>
         Address : <?php echo $_GET["Address"]; ?><br>
         City : <?php echo $_GET["City"]; ?><br>
@@ -88,6 +84,10 @@
         Income:  <?php echo $_GET["Income"]; ?><br>
         Phone Number: <?php echo $_GET["PhoneNumber"]; ?><br>
         Email Address: <?php echo $_GET["EmailAddress"]; ?><br>
+            </div>
+  
+    <div class="col-4">
+        <div id="map"></div>
         </div>
 </div>
        
