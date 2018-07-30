@@ -101,7 +101,7 @@
               var sf = {lat: 37.7219, lng: -122.4782};
               // The map, centered at SFSU
               var map = new google.maps.Map(
-                  document.getElementById('map'), {zoom: 10, center: sf});
+                  document.getElementById('map'), {zoom: 20, center: sf});
               // The marker, positioned at SFSU
               var marker = new google.maps.Marker({position: sf, map: map});
                 
