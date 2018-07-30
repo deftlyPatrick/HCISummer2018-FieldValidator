@@ -72,8 +72,7 @@
                 <p>Income:</p> <?php echo $_GET["Income"]; ?><br>
                 <p>Phone Number:</p> <?php echo $_GET["PhoneNumber"]; ?><br>
                 <p>Email Address:</p> <?php echo $_GET["EmailAddress"]; ?><br>  
-            
-                 <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:600px;"></div>
+
             </div>
         </div>
     <div class="col-sm-2 sidenav"> 
