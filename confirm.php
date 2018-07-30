@@ -72,9 +72,13 @@
         <p>We have successfully received it.    
         <p>Below is a summary of the information you provided.<br><br> </p> 
       </div>
-        <div class="row">
-  <div class="col-8">
-         First Name : <?php echo $_GET["FirstName"]; ?><br>
+ 
+      
+      
+    <div class="container">
+  <div class="row">
+    <div class="col">
+        First Name : <?php echo $_GET["FirstName"]; ?><br>
         Last Name : <?php echo $_GET["LastName"]; ?><br>
         Address : <?php echo $_GET["Address"]; ?><br>
         City : <?php echo $_GET["City"]; ?><br>
@@ -85,12 +89,11 @@
         Phone Number: <?php echo $_GET["PhoneNumber"]; ?><br>
         Email Address: <?php echo $_GET["EmailAddress"]; ?><br>
             </div>
-  
-    <div class="col-4">
-        <div id="map"></div>
-        </div>
-</div>
-       
+    </div>
+    <div class="col">
+      <div id="map"></div>
+    </div>
+  </div>
     
       
     </div>
@@ -98,7 +101,6 @@
      
     </div>
   </div>
-</div>
 
     
     <script>
