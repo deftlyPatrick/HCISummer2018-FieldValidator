@@ -66,7 +66,7 @@
     <div class="col-sm-2 sidenav">
       
     </div>
-    <div class="col-sm-6 text-center"> 
+    <div class="col-sm-8 text-center"> 
     <p>Thank you for submitting this form. 
 
         <p>We have successfully received it.    
