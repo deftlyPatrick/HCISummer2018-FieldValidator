@@ -52,8 +52,8 @@
     }
       
     #map {
-        height: 200px;  /* The height is 400 pixels */
-        width: 100%;  /* The width is the width of the web page */
+        height: 300px;  /* The height is 400 pixels */
+        width: 25%;  /* The width is the width of the web page */
        }
   </style>
 </head>
