@@ -53,7 +53,7 @@
       
     #map {
         height: 320px;  /* The height is 400 pixels */
-        width: 20%;  /* The width is the width of the web page */
+        width: 75%;  /* The width is the width of the web page */
        }
   </style>
 </head>
