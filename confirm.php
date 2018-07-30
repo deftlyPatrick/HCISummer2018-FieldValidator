@@ -97,14 +97,14 @@
     <script>
         // Initialize and add the map
             function initMap() {
-              // The location of Uluru
+              // The location of SFSU
               var sf = {lat: 37.7219, lng: -122.4782};
-              // The map, centered at Uluru
+              // The map, centered at SFSU
               var map = new google.maps.Map(
-                  document.getElementById('map'), {zoom: 4, center: sf});
-              // The marker, positioned at Uluru
+                  document.getElementById('map'), {zoom: 10, center: sf});
+              // The marker, positioned at SFSU
               var marker = new google.maps.Marker({position: sf, map: map});
-              var mapOptions = {center: sf, zoom: 10};
+                
             }
     </script>
     
