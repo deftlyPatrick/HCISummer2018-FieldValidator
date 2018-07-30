@@ -66,16 +66,12 @@
     <div class="col-sm-2 sidenav">
       
     </div>
-    <div class="col-sm-8 text-center"> 
+    <div class="col-sm-6 text-center"> 
     <p>Thank you for submitting this form. 
 
         <p>We have successfully received it.    
         <p>Below is a summary of the information you provided.<br><br> </p> 
-      </div>
- 
-      
-      
-    <div class="container">
+         <div class="container">
   <div class="row">
     <div class="col">
         First Name : <?php echo $_GET["FirstName"]; ?><br>
@@ -94,7 +90,11 @@
       <div id="map"></div>
     </div>
   </div>
-    
+      </div>
+ 
+      
+      
+  
       
     </div>
     <div class="col-sm-2 sidenav">
