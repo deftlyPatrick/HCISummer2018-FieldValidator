@@ -1,8 +1,13 @@
 <!DOCTYPE html>
+<html>
+
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
  <head>
-     <title>Validation</ title>
+     <title>Validation</title>
 </head>
 
   <h1 class = "text-center">CSC 642 Summer 2018 Individual Assignment: Patrick Wong </h1>
@@ -49,34 +54,33 @@
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
+      
     </div>
-        <div class="col-sm-8 text-left"> 
-                <p>Thank you for submitting this form. 
-                <p>We have successfully received it.    
-                <p>Below is a summary of the information you provided.<br><br> </p> 
+    <div class="col-sm-8 text-left"> 
+    <p>Thank you for submitting this form. 
+
+<p>We have successfully received it.    
+<p>Below is a summary of the information you provided.<br><br> </p> 
     
-                First Name : <?php echo $_GET["FirstName"]; ?><br>
-                Last Name : <?php echo $_GET["LastName"]; ?><br>
-                Address : <?php echo $_GET["Address"]; ?><br>
-                City : <?php echo $_GET["City"]; ?><br>
-                State : <?php echo $_GET["State"]; ?><br>
-                Zip Code: <?php echo $_GET["ZipCode"]; ?><br>
-                Education Status: <?php echo $_GET["EducationStatus"]; ?><br>
-                Income: <?php echo $_GET["Income"]; ?><br>
-                Phone Number: <?php echo $_GET["PhoneNumber"]; ?><br>
-                Email Address: <?php echo $_GET["EmailAddress"]; ?><br>  
-            
-                <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:600px;"></div>
-            </div>
-        </div>
-    <div class="col-sm-2 sidenav"> 
+    First Name : <?php echo $_GET["FirstName"]; ?><br>
+    Last Name : <?php echo $_GET["LastName"]; ?><br>
+    Address : <?php echo $_GET["Address"]; ?><br>
+    City : <?php echo $_GET["City"]; ?><br>
+    State : <?php echo $_GET["State"]; ?><br>
+    Zip Code: <?php echo $_GET["ZipCode"]; ?><br>
+    Education Status: <?php echo $_GET["Education"]; ?><br>
+    Income: <?php echo $_GET["Income"]; ?><br>
+    Phone Number: <?php echo $_GET["PhoneNumber"]; ?><br>
+    Email Address: <?php echo $_GET["EmailAddress"]; ?><br>
+    
+
     </div>
+    <div class="col-sm-2 sidenav">
+     
+    </div>
+  </div>
 </div>
 
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgWzjBegv5zRMklJR6eTHIPd_vDSDZuZg&callback=myMap"></script>
-    <!-- Add Google Maps -->
-
 </body>
 </html>
-
